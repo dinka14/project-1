@@ -17,8 +17,9 @@ class SelectResults(unittest.TestCase):
         search = driver.find_element_by_name("arrFilter_ff[NAME]")
         search.clear()
         search.send_keys("AAAAAAA")
-        driver.find_element_by_xpath("//button[@type='submit'][contains(text(),'Search')]")
-        assert "Sorry, No Records Found:(" not in driver.page_source
+        driver.find_element_by_xpath("//button[@type='submit'][contains(text(),'Search')]").click()
+        message = driver.find_element_by_xpath("//h1[@class='h-xmd'][contains(text(),'Sorry, No Records Found:(')]").text
+        self.assertTrue("SORRY", str(message))
 
     def tearDown(self):
         self.driver.close()
