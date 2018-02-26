@@ -21,12 +21,3 @@ class PythonOrgSearch(unittest.TestCase):
 
     def tearDown(self):
         self.driver.close()
-
-
-def suite():
-    suite = unittest.TestSuite()
-    suite.addTest(PythonOrgSearch('test_search_in_python_org'))
-    unittest.TextTestRunner(verbosity=2).run(suite)
-
-
-suite()

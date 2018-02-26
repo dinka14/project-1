@@ -22,12 +22,3 @@ class SelectResults(unittest.TestCase):
 
     def tearDown(self):
         self.driver.close()
-
-
-def suite():
-    suite = unittest.TestSuite()
-    suite.addTest(SelectResults('test_select'))
-    unittest.TextTestRunner(verbosity=2).run(suite)
-
-
-suite()
