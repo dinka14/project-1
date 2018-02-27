@@ -3,7 +3,9 @@ from selenium import webdriver
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.support.ui import Select
-
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
 
 class SelectResults(unittest.TestCase):
     def setUp(self):
@@ -14,7 +16,8 @@ class SelectResults(unittest.TestCase):
         driver = self.driver
         driver.get("https://career.luxoft.com/job-opportunities/")
         try:
-            driver.set_page_load_timeout(5)
+            WebDriverWait(driver, 5).until(
+                EC.presence_of_element_located((By.LINK_TEXT, "http://www.luxoft.com/contact_form/#careers")))
         except TimeoutException:
             pass
         Select(driver.find_element_by_id("search_type")).select_by_value("118283")
