@@ -16,7 +16,7 @@ class SelectResults(unittest.TestCase):
         driver = self.driver
         driver.get("https://career.luxoft.com/job-opportunities/")
         try:
-            WebDriverWait(driver, 5).until(
+            WebDriverWait(driver, 2).until(
                 EC.presence_of_element_located((By.LINK_TEXT, "http://www.luxoft.com/contact_form/#careers")))
         except TimeoutException:
             pass
