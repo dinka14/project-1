@@ -7,6 +7,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 
+
 class SelectResults(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Remote(command_executor='http://127.0.0.1:4444/wd/hub',
