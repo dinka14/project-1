@@ -3,7 +3,7 @@ import paramiko
 port = 22
 
 
-class ConnectBySSH():
+class ConnectBySSH:
     client = paramiko.SSHClient()
 
     def __init__(self, host, user, password):
@@ -28,6 +28,3 @@ def execute(host, user, password, command):
 
 
 execute('smoke.int.zone', 'root', '1q2w3e', 'ls')
-
-
-
