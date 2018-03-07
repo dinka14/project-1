@@ -25,16 +25,24 @@ class ExecuteCommand:
         self.connect = ConnectBySSH(host, user, password)
 
     def list_ve(self,command):
-        stdin, stdout, stderr = self.connect.connect().exec_command(command)
+        connect = self.connect.connect()
+        stdin, stdout, stderr = connect.exec_command(command)
+        data = stdout.read()
+        print(data[77:])
+
+    def stop_ve(self, ve_name):
+        connect = self.connect.connect()
+        stdin, stdout, stderr = connect.exec_command('prlctl stop ' + ve_name + ' && ' + 'prlctl list -a ' + ve_name)
         data = stdout.read()
         print(data)
 
-'''
-def execute(host, user, password, command):
-    connect = ConnectBySSH(host, user, password)
-    stdin, stdout, stderr = connect.connect().exec_command(command)
-    data = stdout.read()
-    print(type(data))
-'''
+    def start_ve(self, ve_name):
+        connect = self.connect.connect()
+        stdin, stdout, stderr = connect.exec_command('prlctl start ' + ve_name + ' && ' + 'prlctl list -a ' + ve_name)
+        data = stdout.read()
+        print(data)
+
 
 ExecuteCommand('smoke.int.zone', 'root', '1q2w3e').list_ve('prlctl list -a')
+#ExecuteCommand('smoke.int.zone', 'root', '1q2w3e').stop_ve('srv-6564eea3df74.aqa.int.zone')
+#ExecuteCommand('smoke.int.zone', 'root', '1q2w3e').start_ve('srv-6564eea3df74.aqa.int.zone')
