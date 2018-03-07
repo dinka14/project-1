@@ -20,11 +20,21 @@ class ConnectBySSH:
         ConnectBySSH.client.close()
 
 
+class ExecuteCommand:
+    def __init__(self, host, user, password):
+        self.connect = ConnectBySSH(host, user, password)
+
+    def list_ve(self,command):
+        stdin, stdout, stderr = self.connect.connect().exec_command(command)
+        data = stdout.read()
+        print(data)
+
+'''
 def execute(host, user, password, command):
     connect = ConnectBySSH(host, user, password)
     stdin, stdout, stderr = connect.connect().exec_command(command)
     data = stdout.read()
     print(type(data))
+'''
 
-
-execute('smoke.int.zone', 'root', '1q2w3e', 'ls')
+ExecuteCommand('smoke.int.zone', 'root', '1q2w3e').list_ve('prlctl list -a')

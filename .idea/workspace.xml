@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5d8b9da-c12f-4a13-a354-cd9789a8c3d4" name="Default" comment="add timeout">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/vz_monitor_backend.py" />
-      <change beforePath="$PROJECT_DIR$/select_results.py" afterPath="$PROJECT_DIR$/select_results.py" />
+    <list default="true" id="b5d8b9da-c12f-4a13-a354-cd9789a8c3d4" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/Denis_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/vz_monitor_backend.py" afterPath="$PROJECT_DIR$/vz_monitor_backend.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,8 +40,8 @@
       <file leaf-file-name="vz_monitor_backend.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vz_monitor_backend.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+            <state relative-caret-position="410">
+              <caret line="27" column="47" lean-forward="true" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -388,7 +388,21 @@
       <option name="project" value="LOCAL" />
       <updated>1519972339226</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="connect by ssh class">
+      <created>1520415839107</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1520415839107</updated>
+    </task>
+    <task id="LOCAL-00013" summary="connect by ssh class">
+      <created>1520416048807</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1520416048807</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -448,7 +462,8 @@
     <MESSAGE value="create runner" />
     <MESSAGE value="correct compare" />
     <MESSAGE value="add timeout" />
-    <option name="LAST_COMMIT_MESSAGE" value="add timeout" />
+    <MESSAGE value="connect by ssh class" />
+    <option name="LAST_COMMIT_MESSAGE" value="connect by ssh class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -704,8 +719,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vz_monitor_backend.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+        <state relative-caret-position="410">
+          <caret line="27" column="47" lean-forward="true" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
           <folding />
         </state>
       </provider>
