@@ -24,7 +24,7 @@ class ExecuteCommand:
     def __init__(self, host, user, password):
         self.connect = ConnectBySSH(host, user, password)
 
-    def list_ve(self,command):
+    def list_ve(self, command):
         connect = self.connect.connect()
         stdin, stdout, stderr = connect.exec_command(command)
         data = stdout.read()
