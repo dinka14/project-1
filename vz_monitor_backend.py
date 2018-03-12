@@ -28,7 +28,9 @@ class ExecuteCommand:
         connect = self.connect.connect()
         stdin, stdout, stderr = connect.exec_command(command)
         data = stdout.read()
-        print(data[77:])
+        listq = data.split()
+        dictq = dict(zip(listq[::2], listq[1::2]))
+        print(dictq)
 
     def stop_ve(self, ve_name):
         connect = self.connect.connect()
@@ -43,6 +45,6 @@ class ExecuteCommand:
         print(data)
 
 
-ExecuteCommand('smoke.int.zone', 'root', '1q2w3e').list_ve('prlctl list -a')
+ExecuteCommand('smoke.int.zone', 'root', '1q2w3e').list_ve("prlctl list -o name,status | sed '1d'")
 #ExecuteCommand('smoke.int.zone', 'root', '1q2w3e').stop_ve('srv-6564eea3df74.aqa.int.zone')
 #ExecuteCommand('smoke.int.zone', 'root', '1q2w3e').start_ve('srv-6564eea3df74.aqa.int.zone')
