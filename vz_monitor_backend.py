@@ -53,7 +53,7 @@ class ExecuteCommand:
         stdout.read()
         stdin, stdout, stderr = connect.exec_command('prlctl list -i -j ' + ve_name)
         data = stdout.read()
-        j = json.loads(data[1:len(data)-2])
+        j = json.loads(data[1:len(data) - 2])
 
         while True:
             try:
@@ -68,8 +68,8 @@ class ExecuteCommand:
         print 'Connect to VNC:', 'Compute node', self.connect.host, 'port', port, 'VNC password', vnc_password
 
 
-ExecuteCommand('smoke.int.zone', 'root', '1q2w3e').set_vnc_password('ATest-dc84b23d647a.aqa.int.zone','1q2w3e4r')
+ExecuteCommand('smoke.int.zone', 'root', '1q2w3e').set_vnc_password('ATest-dc84b23d647a.aqa.int.zone', '1q2w3e4r')
 
-#ExecuteCommand('smoke.int.zone', 'root', '1q2w3e').list_ve("prlctl list -o name,status | sed '1d'")
-#ExecuteCommand('smoke.int.zone', 'root', '1q2w3e').stop_ve('srv-6564eea3df74.aqa.int.zone')
-#ExecuteCommand('smoke.int.zone', 'root', '1q2w3e').start_ve('srv-6564eea3df74.aqa.int.zone')
+# ExecuteCommand('smoke.int.zone', 'root', '1q2w3e').list_ve("prlctl list -o name,status | sed '1d'")
+# ExecuteCommand('smoke.int.zone', 'root', '1q2w3e').stop_ve('srv-6564eea3df74.aqa.int.zone')
+# ExecuteCommand('smoke.int.zone', 'root', '1q2w3e').start_ve('srv-6564eea3df74.aqa.int.zone')
